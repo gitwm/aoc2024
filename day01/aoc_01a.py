@@ -1,6 +1,6 @@
-"""AOC 2024 - day 1a"""
+"""AOC 2024 - day 1 part 1"""
 
-with open(r'C:\Users\wmokrzan\Downloads\z1_input1.txt', 'r') as file:
+with open(r'day01/z1_input1.txt', 'r') as file:
      txt = file.read()
 
 lines = txt.split("\n")
@@ -18,11 +18,9 @@ llst.sort()
 sm = 0
 
 for i in range(len(rlst)):
-     if int(rlst[i])<int(llst[i]):
-         sm = sm + int(rlst[i])-int(llst[i])
-     else:
+     if int(rlst[i]) < int(llst[i]):
          sm = sm + int(llst[i]) - int(rlst[i])
-
+     else:
+         sm = sm + int(rlst[i]) - int(llst[i])
+         
 print(sm)
-
-#print(rlst)
